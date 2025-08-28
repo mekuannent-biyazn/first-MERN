@@ -1,10 +1,10 @@
-// const registerUser = async (req, res) => {
-//   const { name, email, password, pic } = req.bode;
+const registerUser = async (req, res) => {
+  const { name, email, password, pic } = req.bode;
 
-//   res.json({
-//     name,
-//     email,
-//   });
-// };
+  res.json({
+    name,
+    email,
+  });
+};
 
-// module.export = { registerUser };
+module.export = { registerUser };
