@@ -1,0 +1,21 @@
+
+  // "dependencies": {
+  //   
+  //   
+    "concurrently": "^9.2.0",
+    // "concurrently": "^9.2.0",
+  //   
+  //   "mongoose": "^8.16.1",
+  //   
+  // }
+    // "type": "commonjs",
+script{
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm start\" \"npm run client\""
+    // ,}
+
+
+
+
+    frontend/package.json{
+  "proxy": "http://127.0.0.1:5000",}

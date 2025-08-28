@@ -1,29 +1,30 @@
 const express = require("express");
 const notes = require("./data/notes");
 const dotenv = require("dotenv");
-// // const { connect } = require("mongoose");
+const conectDB = require("./config/db");
+const userRoutes = require("./routers/userRouters");
+const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 
-dotenv.config();
-// const connectDB = require("./config/db");
-// connectDB();
 const app = express();
-// const noteRoutes = require("./routers/noteRoutes");
-// app.use("/api/notes", noteRoutes);
+dotenv.config();
+conectDB();
+
+app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("API is running..");
+  res.send("API is running");
 });
 
 app.get("/api/notes", (req, res) => {
   res.json(notes);
 });
 
-app.get("/api/notes/:id", (req, res) => {
-  const note = notes.find((n) => n._id === req.params.id);
+app.use("/api/users", userRoutes);
+app.use(notFound);
+app.use(errorHandler);
 
-  res.send(note);
+const PORT = process.env.PORT;
+
+app.listen(5000, () => {
+  console.log(`server running on http://localhost:${PORT}`);
 });
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, console.log(`server started in port ${PORT}`));
