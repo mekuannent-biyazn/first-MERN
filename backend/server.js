@@ -14,6 +14,9 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/notes", noteRoutes);
+app.get("/", (req, res) => {
+  res.send("Api is running");
+});
 
 // ........................Deployment........................
 
