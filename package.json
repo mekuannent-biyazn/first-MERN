@@ -1,17 +1,14 @@
 {
   "name": "mern",
   "version": "1.0.0",
-  "description": "MERN fullstack app",
+  "description": "",
   "license": "ISC",
   "author": "mekuannent biyazn",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
+    "start": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "client-install": "npm install --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run client-install && npm run build --prefix frontend"
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
@@ -19,15 +16,14 @@
     "concurrently": "^9.2.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "express": "^4.21.1",
+    "express": "^5.1.0",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.0",
+    "nodemon": "^3.1.10",
     "react-bootstrap": "^2.10.10"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mekuannent-biyazn/first-MERN.git"
