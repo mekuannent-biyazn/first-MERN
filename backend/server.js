@@ -14,7 +14,7 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://first-mern-cqq5.vercel.app", // your frontend URL
+    origin: "https://first-mern-20fu.onrender.com", // your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
