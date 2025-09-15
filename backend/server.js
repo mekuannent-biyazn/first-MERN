@@ -5,12 +5,19 @@ const userRoutes = require("./routers/userRouters");
 const noteRoutes = require("./routers/noteRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
 dotenv.config();
 connectDB();
 
 app.use(express.json());
+app.use(
+  cors({
+    origin: "https://first-mern-cqq5.vercel.app", // your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 app.use("/api/users", userRoutes);
 app.use("/api/notes", noteRoutes);
