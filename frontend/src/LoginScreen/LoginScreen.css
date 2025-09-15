@@ -1,0 +1,74 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+
+  background: linear-gradient(135deg, #0b090eff 0%, #2575fc 100%);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.loginContainer form {
+  background: #393b42ff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.loginContainer form .form-label {
+  font-weight: 600;
+  color: #e7eef0ff;
+}
+
+.loginContainer form .form-control {
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.loginContainer form .form-control:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.3);
+}
+.loginContainer form .form-control:hover {
+  background: #70ac61ff;
+}
+
+.loginContainer form button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  background: #49fc25ff;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.loginContainer form button {
+  margin-top: 15px;
+}
+
+.loginContainer form button:hover {
+  margin-top: 15px;
+  background: #1acad0ff;
+  transform: translateY(-2px);
+}
+
+.loginContainer a {
+  color: #e2ecdcff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.loginContainer a:hover {
+  color: #36cb11ff;
+}
