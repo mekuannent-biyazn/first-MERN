@@ -56,7 +56,7 @@ export const createNoteAction =
         },
       };
       const { data } = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/notes/create`,
+        "/api/notes/create",
         { title, content, category },
         config
       );

@@ -17,6 +17,7 @@ import ProfileScreen from "./screens/profileScreen/ProfileScreen";
 const App = () => {
   const [search, setSearch] = useState("");
   console.log(search);
+  console.log("API URL:", process.env.REACT_APP_API_URL);
 
   return (
     <>

@@ -5,7 +5,18 @@ const userRoutes = require("./routers/userRouters");
 const noteRoutes = require("./routers/noteRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 
+const cors = require("cors");
+
 const app = express();
+
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://notezipper-website.vercel.app"],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  }),
+);
+
 dotenv.config();
 connectDB();
 
