@@ -11,12 +11,6 @@
 //   USER_UPDATE_SUCCESS,
 // } from "../constants/userConstants";
 // import axios from "axios";
-// import API from "../api";
-
-// const { data } = await API.post("/api/users/login", {
-//   email,
-//   password,
-// });
 
 // export const login = (email, password) => async (dispatch) => {
 //   try {
@@ -28,7 +22,7 @@
 //     const { data } = await axios.post(
 //       "./api/users/login",
 //       { email, password },
-//       config,
+//       config
 //     );
 
 //     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
@@ -56,7 +50,7 @@
 //     const { data } = await axios.post(
 //       "./api/users",
 //       { name, pic, email, password },
-//       config,
+//       config
 //     );
 //     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
 //     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
